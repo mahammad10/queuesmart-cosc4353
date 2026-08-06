@@ -1,0 +1,503 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+}
+
+header{
+    height: 230px;
+    background: #56bdf2;
+    padding-left: 55px;
+    padding-top: 45px;
+}
+
+header p{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header h1{
+    font-size: 80px;
+    font-weight: 700;
+    margin-left: 90px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.tabs{
+    display: flex;
+    width: 900px;
+    padding-left: 55px;
+}
+
+.tab{
+    width: 200px;
+    height: 75px;
+    background: #e5f5ff;
+    border: 7px solid black;
+    border-bottom: none;
+    border-radius: 15px 15px 0 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.tab.active{
+    background: #a7d8ff;
+    font-weight: bold;
+}
+
+.login-box{
+    width: 900px;
+    border: 8px solid black;
+    padding: 45px;
+    min-height: 650px;
+}
+
+.admin-box{
+    padding-bottom: 35px;
+}
+
+label{
+    display: block;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+input{
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 35px;
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+
+.forgot{
+    display: block;
+    color: black;
+    font-size: 26px;
+    margin-bottom: 70px;
+}
+
+.login-button{
+    width: 100%;
+    height: 90px;
+    background: #75bdf5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-button:hover{
+    background: #5aaeea;
+}
+
+.bottom-link{
+    margin-top: 25px;
+    color: black;
+    font-size: 30px;
+}
+
+#message{
+    margin-top: 25px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2{
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.message{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.error{
+    color:red;
+}
+
+.success{
+    color: green;
+}
+
+.dashboard-container{
+    width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.dashboard-container h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.dashboard-card {
+    border: 6px solid black;
+    padding: 30px;
+    text-align: left;
+}
+
+.dashboard-card h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.dashboard-card p,
+.dashboard-card li {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.dashboard-button {
+    display: block;
+    background: #75bdf5;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 8px;
+}
+
+.dashboard-button:hover {
+    background: #5aaeea;
+}
+
+.service-card{
+    border:6px solid black;
+    border-radius:12px;
+    padding:30px;
+    margin-bottom:30px;
+    text-align:center;
+    background:white;
+}
+
+.service-card h3{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.service-card p{
+    font-size:24px;
+    margin-bottom:25px;
+}
+
+.join-button{
+    width:100%;
+    height:70px;
+    background:#75bdf5;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:28px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.join-button:hover{
+    background:#5aaeea;
+    transform:scale(1.02);
+}
+
+.status-card {
+    border: 8px solid black;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    background: white;
+    margin-bottom: 30px;
+}
+
+.status-card h3 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.status-card p {
+    font-size: 26px;
+    margin-top: 25px;
+}
+
+.big-number {
+    font-size: 60px;
+    font-weight: bold;
+    color: #56bdf2;
+    margin-top: 10px;
+}
+
+.status-badge {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 18px 40px;
+    border-radius: 30px;
+    background: #c6e9ff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.history-card {
+    border: 8px solid black;
+    border-radius: 12px;
+    padding: 35px;
+    background: white;
+}
+
+.history-card h3 {
+    font-size: 34px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 22px;
+}
+
+.history-table th,
+.history-table td {
+    border: 3px solid black;
+    padding: 18px;
+    text-align: center;
+}
+
+.history-table th {
+    background: #c6e9ff;
+    font-weight: bold;
+}
+/* =========================================================
+   ADMIN: Dashboard, Service Management, Queue Management
+   ========================================================= */
+
+.admin-service-row {
+    border: 6px solid black;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: white;
+}
+
+.admin-service-info h3 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.admin-service-info p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.admin-service-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.status-pill {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.pill-open {
+    background: #c9f5d0;
+    color: #1a7a30;
+}
+
+.pill-closed {
+    background: #f5c9c9;
+    color: #a3272a;
+}
+
+.small-button {
+    background: #75bdf5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.small-button:hover {
+    background: #5aaeea;
+}
+
+.small-button:disabled {
+    background: #cfcfcf;
+    cursor: not-allowed;
+}
+
+.danger-button {
+    background: #e05d5d;
+}
+
+.danger-button:hover {
+    background: #c94b4b;
+}
+
+.add-service-button {
+    display: inline-block;
+    margin-bottom: 30px;
+    background: #56bdf2;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 16px 30px;
+    border-radius: 8px;
+}
+
+.add-service-button:hover {
+    background: #3fa9e0;
+}
+
+.empty-message {
+    font-size: 22px;
+    text-align: center;
+    color: #555;
+    padding: 20px 0;
+}
+
+/* Service Management form */
+
+.service-form-card {
+    border: 8px solid black;
+    border-radius: 12px;
+    padding: 40px;
+    background: white;
+    margin-bottom: 40px;
+}
+
+.service-form-card label {
+    font-size: 26px;
+}
+
+.service-form-card input,
+.service-form-card select,
+.service-form-card textarea {
+    width: 100%;
+    font-size: 20px;
+    padding: 14px;
+    margin-bottom: 25px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.service-form-card textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.service-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+
+.service-table th,
+.service-table td {
+    border: 3px solid black;
+    padding: 16px;
+    text-align: center;
+}
+
+.service-table th {
+    background: #c6e9ff;
+    font-weight: bold;
+}
+
+/* Queue Management */
+
+.queue-select {
+    width: 100%;
+    font-size: 24px;
+    padding: 14px;
+    margin-bottom: 30px;
+    border: 3px solid black;
+    border-radius: 8px;
+}
+
+.queue-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 4px solid black;
+    border-radius: 10px;
+    padding: 18px 25px;
+    margin-bottom: 16px;
+    background: white;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.queue-position-label {
+    font-size: 24px;
+    font-weight: bold;
+    color: #56bdf2;
+    width: 40px;
+}
+
+.queue-name {
+    font-size: 24px;
+    flex: 1;
+}
+
+.queue-row-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.serve-next-button {
+    width: 100%;
+    height: 80px;
+    background: #56bdf2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 30px 0;
+}
+
+.serve-next-button:hover {
+    background: #3fa9e0;
+}

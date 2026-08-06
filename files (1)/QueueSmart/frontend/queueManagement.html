@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Queue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="queueManagement">
+
+<header>
+    <p>Admin</p>
+    <h1>Queue Smart</h1>
+</header>
+
+<div class="dashboard-container">
+
+    <h2>Queue Management</h2>
+
+    <label style="font-size:24px; display:block; margin-bottom:15px;">Select Service:</label>
+    <select id="serviceSelect" class="queue-select"></select>
+
+    <p class="message" id="queueSummary"></p>
+
+    <div id="queueList"></div>
+
+    <button class="serve-next-button" onclick="serveNext()">SERVE NEXT USER</button>
+
+    <a href="adminDashboard.html" class="bottom-link">Back to Admin Dashboard</a>
+
+</div>
+
+<script src="api.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

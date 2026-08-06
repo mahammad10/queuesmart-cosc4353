@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="history">
+
+<header>
+    <p>Past Visits</p>
+    <h1>Queue Smart</h1>
+</header>
+
+<div class="dashboard-container">
+
+    <h2>Queue History</h2>
+
+    <div class="history-card">
+
+        <h3 id="historySummary">Loading...</h3>
+
+        <table class="history-table">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Joined</th>
+                    <th>Wait</th>
+                    <th>Outcome</th>
+                </tr>
+            </thead>
+            <tbody id="historyTableBody"></tbody>
+        </table>
+
+    </div>
+
+    <br>
+
+    <a href="dashboard.html" class="bottom-link">Back to Dashboard</a>
+
+</div>
+
+<script src="api.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

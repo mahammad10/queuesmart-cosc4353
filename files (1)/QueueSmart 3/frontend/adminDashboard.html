@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="adminDashboard">
+
+<header>
+    <p>Welcome, Admin</p>
+    <h1>Queue Smart</h1>
+</header>
+
+<div class="dashboard-container">
+
+    <h2>Admin Dashboard</h2>
+
+    <a href="serviceManagement.html" class="add-service-button">+ Add New Service</a>
+
+    <div id="adminServiceList"><p class="empty-message">Loading services...</p></div>
+
+    <a href="#" class="bottom-link" onclick="doLogout()">LOG OUT</a>
+
+</div>
+
+<script src="api.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
