@@ -1,24 +1,16 @@
-"""
-In-memory data store for QueueSmart (Assignment 3).
-
-No database is used in this assignment. Every collection lives in plain Python
-dictionaries / lists and is reset when the server restarts. Assignment 4 will
-swap this module out for a real persistence layer, which is why every other
-module talks to the data ONLY through this file.
-"""
 
 from threading import Lock
 
 
 class Store:
-    """Holds all application state in memory."""
+
 
     def __init__(self):
         self.lock = Lock()
         self.clear()
 
     def clear(self):
-        """Wipe every collection without loading demo data."""
+
         self.users = {}            # user_id -> user dict
         self.sessions = {}         # token   -> user_id
         self.services = {}         # service_id -> service dict
@@ -34,7 +26,7 @@ class Store:
         self._sequence = 0         # global arrival counter for FIFO ordering
 
     def reset(self):
-        """Wipe everything and reload the demo data. Also used by unit tests."""
+      
         self.clear()
         self.seed()
 
@@ -82,7 +74,7 @@ class Store:
         return self.queues.setdefault(service_id, [])
 
     def seed(self):
-        """Demo data so the front end has something to show immediately."""
+       
         from app.modules import auth_module, service_module
 
         auth_module.register_user({

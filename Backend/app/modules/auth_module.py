@@ -47,7 +47,7 @@ def verify_password(password, stored_hash):
 
 
 def public_user(user):
-    """The version of a user record that is safe to send to the front end."""
+ 
     return {
         "id": user["id"],
         "first_name": user["first_name"],
@@ -60,7 +60,7 @@ def public_user(user):
 
 
 def validate_registration(data):
-    """Validate a registration payload and return cleaned values."""
+
     data = require_payload(data)
 
     cleaned = {
@@ -84,7 +84,7 @@ def validate_registration(data):
 
 
 def register_user(data):
-    """Create a new account. Returns {user, token}."""
+ 
     cleaned = validate_registration(data)
 
     if store.find_user_by_email(cleaned["email"]):
@@ -134,7 +134,6 @@ def create_session(user):
 
 
 def get_user_by_token(token):
-    """Resolve a bearer token to a user record, or raise AuthError."""
     if not token:
         raise AuthError("Authentication token is missing.")
 

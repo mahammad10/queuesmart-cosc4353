@@ -1,8 +1,4 @@
-"""
-QueueSmart back end - Flask application factory.
 
-Run with:  python run.py     (serves the API and the A2 front end together)
-"""
 
 import os
 
@@ -52,7 +48,7 @@ def register_blueprints(app):
 
 
 def register_error_handlers(app):
-    """Turn our custom exceptions into consistent JSON error responses."""
+ 
 
     @app.errorhandler(ValidationError)
     def handle_validation(error):
@@ -99,7 +95,7 @@ def register_cors(app):
 
 
 def register_frontend(app):
-    """Serve the Assignment 2 front end so there is nothing else to run."""
+  
 
     @app.get("/")
     def index():

@@ -1,15 +1,4 @@
-"""
-Reusable backend validation helpers.
 
-Every validator raises ValidationError, which the Flask error handler turns
-into an HTTP 400 response shaped like:
-
-    {"error": "Validation failed", "field": "email",
-     "message": "Please enter a valid email address."}
-
-Rules enforced here cover the three things A3 asks for:
-required fields, field types, and field length limits.
-"""
 
 import re
 
@@ -28,7 +17,7 @@ MAX_DURATION = 480  # 8 hours is a sane upper bound for one appointment
 
 
 class ValidationError(Exception):
-    """Raised when user-supplied input fails a backend rule."""
+
 
     status_code = 400
 
@@ -46,7 +35,7 @@ class ValidationError(Exception):
 
 
 class NotFoundError(Exception):
-    """Raised when a requested record does not exist."""
+
 
     status_code = 404
 
@@ -59,7 +48,7 @@ class NotFoundError(Exception):
 
 
 class ConflictError(Exception):
-    """Raised when an action is not allowed in the current state."""
+  
 
     status_code = 409
 
